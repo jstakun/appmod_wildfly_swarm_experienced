@@ -49,8 +49,28 @@
 
     <!-- TODO: Add dependencies here -->
 
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>jpa</artifactId>
+    </dependency>
 
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>cdi</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>arquillian</artifactId>
+      <version>${version.wildfly.swarm.community}</version>
+      <scope>test</scope>
+    </dependency>    
       
+    <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>undertow</artifactId>
+    </dependency>
+          
   </dependencies>
   
   <build>
@@ -102,19 +122,19 @@
     </profile>
 
   </profiles>
+  
+	<repositories>
+		<repository>
+			<id>redhat</id>
+			<url>https://maven.repository.redhat.com/ga/</url>
+		</repository>
+	</repositories>
 
-  <repositories>
-    <repository>
-      <id>redhat</id>
-      <url>https://maven.repository.redhat.com/ga/</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>redhat</id>
-      <url>https://maven.repository.redhat.com/ga/</url>
-    </pluginRepository>
-  </pluginRepositories>
-
+	<pluginRepositories>
+		<pluginRepository>
+			<id>redhat</id>
+			<url>https://maven.repository.redhat.com/ga/</url>
+		</pluginRepository>
+</pluginRepositories>
+  
 </project>
