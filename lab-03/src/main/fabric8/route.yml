@@ -3,4 +3,4 @@ spec:
     targetPort: 8080
   to:
     kind: Service
-    name: ${project.artifactId}
+    name: ${project}.inventory-service
