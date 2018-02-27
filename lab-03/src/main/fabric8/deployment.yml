@@ -1,3 +1,5 @@
+metadata:
+  name: inventory-service
 spec:
   template:
     spec:
