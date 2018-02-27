@@ -89,10 +89,6 @@ public class RestApiTest {
     @RunAsClient
     public void testGetInventorWhenItemIdDoesNotExist() throws Exception {
 
-        //
-        // TODO:
-        //
-
         // create a target to the inventory endpoint
         WebTarget target = client.target("http://localhost:" + port).path("/inventory").path("/999999");
 
