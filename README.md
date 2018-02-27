@@ -2,7 +2,7 @@
 
 This repository contains the _Wildfly Swarm Experienced_ lab exercises. They are managed under 2 distinct branches : 
 
-* [Master](https://github.com/gpe-mw-training/appmod_wildfly_swarm_experienced/tree/exercise) : skeleton of the lab exercises from where the students will start.
+* [Master](https://github.com/gpe-mw-training/appmod_wildfly_swarm_experienced/tree/master) : skeleton of the lab exercises from where the students will start.
 * [Solution](https://github.com/gpe-mw-training/appmod_wildfly_swarm_experienced/tree/solution) : what we expect to have at the end of the exercise.
 
 The labs are available here for download : 
