@@ -24,10 +24,6 @@ public class InventoryResource {
 	    @Produces(MediaType.APPLICATION_JSON)
 	    public Inventory getInventory(@PathParam("itemId") String itemId) {
 
-	        //
-	        // TODO
-	        //
-
 	        // get the inventory object from the inventoryService. Use the given itemId.
 	    		Inventory inventory = inventoryService.getInventory(itemId);
 
@@ -40,9 +36,6 @@ public class InventoryResource {
 	    		}
 	    		else {
 	    			return inventory;
-	    		}
-	    		
-	    	
+	    		}	
 	    }
-	    
 }
