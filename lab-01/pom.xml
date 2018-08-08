@@ -41,16 +41,34 @@
         <artifactId>httpclient</artifactId>
         <version>4.5.2</version>
       </dependency>
-
+     
     </dependencies>
   </dependencyManagement>
   
   <dependencies>
 
-    <!-- TODO: Add dependencies here -->
-
-
-      
+     <dependency>
+        <groupId>org.wildfly.swarm</groupId>
+        <artifactId>jpa</artifactId>
+      </dependency>
+  
+      <dependency>
+         <groupId>org.wildfly.swarm</groupId>
+         <artifactId>cdi</artifactId>
+     </dependency>
+     
+         <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>arquillian</artifactId>
+      <version>${version.wildfly.swarm.community}</version>
+      <scope>test</scope>
+    </dependency>
+    
+        <dependency>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>undertow</artifactId>
+    </dependency>
+       
   </dependencies>
   
   <build>

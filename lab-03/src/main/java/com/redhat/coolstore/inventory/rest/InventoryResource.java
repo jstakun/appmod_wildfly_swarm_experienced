@@ -18,7 +18,6 @@ public class InventoryResource {
 
 	  @Inject
 	  private InventoryService inventoryService;
-
 	  
 	    @GET
 	    @Path("/{itemId}")
