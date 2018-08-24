@@ -1,19 +1,29 @@
 package com.redhat.coolstore.inventory.rest;
 
+import java.util.Date;
+
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-import org.wildfly.swarm.health.Health;
-import org.wildfly.swarm.health.HealthStatus;
+import org.eclipse.microprofile.health.Health;
+import org.eclipse.microprofile.health.HealthCheck;
+import org.eclipse.microprofile.health.HealthCheckResponse;
 
-@Path("/")
-public class HealthCheckResource {
 
-    @GET
-    @Health
-    @Path("/status")
-    public HealthStatus check() {
-        return HealthStatus.named("server-state").up();
-    }
+@Health
+@ApplicationScoped
+public class HealthCheckResource  implements HealthCheck {
+	
+	private String env = "dev";
+
+	@Override
+	public HealthCheckResponse call() {
+		return HealthCheckResponse.named("sessions-check")
+				.withData("env", env)
+				.withData("lastCheckDate", new Date().toString())
+				.state(true)
+				.build();
+	}
 
 }
